@@ -1,0 +1,30 @@
+{
+  "name": "vanilla-code-coverage",
+  "version": "1.0.0",
+  "description": "The bare necessities to have a code coverage badge",
+  "main": "application.js",
+  "scripts": {
+    "test": "istanbul cover test.js",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/vanilla-code-coverage.git"
+  },
+  "keywords": [
+    "minimal",
+    "code",
+    "coverage",
+    "test"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WebReflection/vanilla-code-coverage/issues"
+  },
+  "homepage": "https://github.com/WebReflection/vanilla-code-coverage#readme",
+  "devDependencies": {
+    "coveralls": "^2.11.15",
+    "istanbul": "^0.4.5"
+  }
+}

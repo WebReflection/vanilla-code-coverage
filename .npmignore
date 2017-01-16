@@ -1,0 +1,5 @@
+.DS_Store
+.travis.yml
+.gitignore
+coverage/*
+node_modules/*
