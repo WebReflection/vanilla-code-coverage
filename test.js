@@ -10,3 +10,12 @@ test(typeof module === 'function');
 test.log('invoked returns');
 test(module(random) === random);
 test(module() === null);
+
+test.async(function (done) {
+  setTimeout(function () {
+    test.log('async returns');
+    test(module(random) === random);
+    test(module() === null);
+    done();
+  }, 100);
+});
