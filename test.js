@@ -4,18 +4,16 @@ var random = Math.random();
 
 test.title('Testing Application');
 
-test.log('is a function');
-test(typeof module === 'function');
+test(typeof module === 'function', 'is a function');
 
-test.log('invoked returns');
-test(module(random) === random);
-test(module() === null);
+test(module(random) === random, 'returns random');
+test(module() === null, 'returns null');
 
 test.async(function (done) {
   setTimeout(function () {
-    test.log('async returns');
+    test.log('*async* tests');
     test(module(random) === random);
-    test(module() === null);
+    test(module() === null, 'all good');
     done();
   }, 100);
 });
