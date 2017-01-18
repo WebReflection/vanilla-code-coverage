@@ -1,11 +1,12 @@
+var test = require('tressa');
 var module = require('./application');
 var random = Math.random();
 
-console.log('Testing Application');
+test.title('Testing Application');
 
-console.log('is a function');
-console.assert(typeof module === 'function');
+test.log('is a function');
+test(typeof module === 'function');
 
-console.log('invoked returns');
-console.assert(module(random) === random);
-console.assert(module() === null);
+test.log('invoked returns');
+test(module(random) === random);
+test(module() === null);
